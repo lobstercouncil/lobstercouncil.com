@@ -43,15 +43,50 @@
       font-size: 14px;
       letter-spacing: 3px;
       text-transform: uppercase;
+      margin-bottom: 40px;
     }
+    .signup-form {
+      display: flex;
+      gap: 8px;
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .signup-form input {
+      flex: 1;
+      padding: 14px 20px;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      background: rgba(22,27,34,0.8);
+      color: #fff;
+      font-size: 15px;
+      outline: none;
+    }
+    .signup-form input:focus { border-color: #e8543e; }
+    .signup-form button {
+      padding: 14px 24px;
+      border: none;
+      border-radius: 12px;
+      background: #e8543e;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .signup-form button:hover { background: #d4784a; }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="logo">🦞</div>
     <h1>Lobster Council</h1>
-    <p class="tagline">Something big is coming.</p>
-    <div class="coming-soon">Coming Soon</div>
+    <p class="tagline">AI-powered. Council-governed. Lobster-approved.</p>
+    <div class="coming-soon">Something Big Is Coming</div>
+    <form class="signup-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent = 'You\'re in 🦞'; this.querySelector('input').disabled = true;">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Join the Council</button>
+    </form>
   </div>
 </body>
 </html>
